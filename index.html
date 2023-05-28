@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1>Formulario de Registro</h1>
+
+    <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" required>
+
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" required>
+
+        <label for="cantidadEntradas">Cantidad de entradas:</label>
+        <input type="number" id="cantidadEntradas" min="1" required>
+
+        <label for="categoria">Categoría:</label>
+        <select id="categoria" required>
+            <option value="particular">Particular</option>
+            <option value="estudiante">Estudiante</option>
+            <option value="orador">Orador</option>
+        </select>
+
+        <br><br>
+        <button type="button" onclick="calcularTotal()">Calcular Total</button>
+        <button type="button" onclick="limpiarFormulario()">Borrar</button>
+    </form>
+
+    <div id="totalPagar"></div>
+
+    <h2>Resumen:</h2>
+    <p>Nombre: <span id="resumenNombre"></span></p>
+    <p>Apellido: <span id="resumenApellido"></span></p>
+    <p>Correo Electrónico: <span id="resumenCorreo"></span></p>
+    <p>Cantidad de entradas: <span id="resumenCantidadEntradas"></span></p>
+    <p>Categoría: <span id="resumenCategoria"></span></p>
+    <p>Total a pagar: <span id="resumenTotalPagar"></span></p>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
